@@ -76,7 +76,6 @@ button { font: inherit; }
     linear-gradient(125deg, #06162d 0%, #062957 48%, #075db6 100%);
 }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -3; opacity: .1; background-image: linear-gradient(rgba(255,255,255,.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.4) 1px, transparent 1px); background-size: 70px 70px; mask-image: linear-gradient(to right, black, transparent 70%); }
-.hero::after { content: "P.A.S.M.E"; position: absolute; right: -20px; bottom: -45px; z-index: -2; font: 800 clamp(90px, 14vw, 220px)/1 var(--display); color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.08); }
 .hero-copy { max-width: 720px; z-index: 2; }
 .eyebrow { display: flex; align-items: center; gap: 12px; font: 700 12px/1 var(--body); letter-spacing: .17em; }
 h1, h2, h3, p { margin-top: 0; }
