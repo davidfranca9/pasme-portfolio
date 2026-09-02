@@ -78,7 +78,6 @@ button { font: inherit; }
 .hero::after { content: "P.A.S.M.E"; position: absolute; right: -20px; bottom: -45px; z-index: -2; font: 800 clamp(90px, 14vw, 220px)/1 var(--display); color: transparent; -webkit-text-stroke: 1px rgba(255,255,255,.08); }
 .hero-copy { max-width: 720px; z-index: 2; }
 .eyebrow { display: flex; align-items: center; gap: 12px; font: 700 12px/1 var(--body); letter-spacing: .17em; }
-.eyebrow > span { width: 28px; height: 2px; background: var(--cyan); }
 h1, h2, h3, p { margin-top: 0; }
 h1 { margin: 25px 0 28px; font: 700 clamp(58px, 6.2vw, 102px)/.92 var(--display); letter-spacing: -.065em; }
 h1 em, h2 em { display: inline-block; color: var(--cyan); font-style: normal; }
@@ -110,7 +109,6 @@ h1 em, h2 em { display: inline-block; color: var(--cyan); font-style: normal; }
 .idea-icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; color: var(--ink); background: var(--cyan); }
 .idea-card strong, .idea-card small { display: block; }.idea-card strong { font-size: 12px; }.idea-card small { color: rgba(255,255,255,.6); font-size: 10px; }
 .scroll-note { position: absolute; bottom: 30px; left: clamp(24px, 7vw, 110px); display: flex; gap: 9px; align-items: center; color: rgba(255,255,255,.42); font-size: 10px; text-transform: uppercase; letter-spacing: .13em; }
-.scroll-note span { width: 28px; height: 1px; background: currentColor; }
 
 .section { padding: 120px clamp(24px, 7vw, 110px); }
 .section-label { margin-bottom: 70px; color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .17em; }
