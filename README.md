@@ -28,3 +28,13 @@ em `index.html`, ajustando `src`, `width`, `height`, `alt` e `data-caption`.
 
 Os cards preservam a proporção original da imagem (nada é cortado) e abrem em
 visualização ampliada ao clique.
+
+## Cache
+
+`index.html` chama `styles.css` e `script.js` com `?v=<hash>` para o navegador
+não servir versão antiga depois de um deploy. Ao alterar esses arquivos,
+recalcule o hash:
+
+```powershell
+python -c "import hashlib;print(hashlib.sha1(open('styles.css','rb').read()).hexdigest()[:8])"
+```
