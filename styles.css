@@ -165,17 +165,15 @@ h1 em, h2 em { display: inline-block; color: var(--cyan); font-family: var(--acc
 .profiles-heading { display: grid; grid-template-columns: .8fr 1.2fr; gap: 6vw; align-items: end; margin-bottom: 55px; }
 .profiles-heading .section-label { margin: 0; }
 .profiles-heading h2 { font-size: clamp(38px, 4.5vw, 68px); }
-.profile-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.profile-card { position: relative; isolation: isolate; overflow: hidden; display: grid; grid-template-columns: 58px 1fr 28px; gap: 18px; align-items: center; min-height: 112px; padding: 22px; border: 1px solid rgba(6,103,242,.12); border-radius: 24px; background: rgba(255,255,255,.7); box-shadow: 0 14px 40px rgba(24,76,117,.08); transition: transform .25s, border-color .25s, box-shadow .25s; }
-.profile-card::before { content: ""; position: absolute; z-index: -1; width: 140px; height: 140px; right: -75px; top: -85px; border-radius: 50%; background: radial-gradient(circle, rgba(67,216,255,.28), transparent 68%); transition: transform .3s; }
-.profile-card:hover { transform: translateY(-5px); border-color: rgba(6,103,242,.28); box-shadow: 0 22px 48px rgba(24,76,117,.14); }
-.profile-card:hover::before { transform: scale(1.35); }
-.profile-symbol { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(145deg, #0758d4, #3fdcff); box-shadow: 0 9px 24px rgba(6,103,242,.22), inset 0 1px 0 rgba(255,255,255,.45); }
+.profile-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.profile-card { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--white); transition: transform .3s, border-color .3s, box-shadow .3s; }
+.profile-card:hover { transform: translateY(-6px); border-color: rgba(6,103,242,.28); box-shadow: 0 24px 52px rgba(24,76,117,.16); }
+.profile-feed { display: block; overflow: hidden; aspect-ratio: 1; background: #10141b; }
+.profile-feed img { width: 100%; height: 100%; object-fit: contain; transition: transform .5s; }
+.profile-card:hover .profile-feed img { transform: scale(1.04); }
+.profile-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px; }
 .profile-name small { display: block; margin-bottom: 6px; color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .14em; }
-.profile-name strong { overflow-wrap: anywhere; font: 700 clamp(17px, 1.7vw, 25px) var(--display); letter-spacing: -.025em; }
-.instagram-mark { position: relative; width: 25px; height: 25px; border: 2px solid white; border-radius: 8px; }
-.instagram-mark::before { content: ""; position: absolute; width: 8px; height: 8px; left: 50%; top: 50%; border: 2px solid white; border-radius: 50%; transform: translate(-50%, -50%); }
-.instagram-mark::after { content: ""; position: absolute; width: 3px; height: 3px; right: 4px; top: 4px; border-radius: 50%; background: white; }
+.profile-name strong { overflow-wrap: anywhere; font: 700 clamp(14px, 1.15vw, 17px) var(--display); letter-spacing: -.025em; }
 .profile-arrow { color: var(--blue); font-size: 22px; }
 
 .process { background: var(--paper); }
@@ -228,6 +226,7 @@ footer { padding: 36px clamp(24px, 7vw, 110px); display: grid; grid-template-col
   .service-item { grid-template-columns: 1fr 25px; }.service-item p { grid-column: 1 / 2; }.service-arrow { grid-column: 2; grid-row: 1; }
   .project-grid { grid-template-columns: 1fr; }.project-large { grid-column: auto; }
   .profiles-heading { grid-template-columns: 1fr; gap: 25px; }
+  .profile-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .contact { grid-template-columns: 1fr; }.contact-mascot { position: absolute; right: -12%; bottom: -10%; width: 48vw; opacity: .25; }
 }
 
@@ -240,7 +239,7 @@ footer { padding: 36px clamp(24px, 7vw, 110px); display: grid; grid-template-col
   .manifesto-copy { padding-left: 22px; }
   .service-item { gap: 12px; grid-template-columns: 1fr 24px; }.service-item p { grid-column: 1 / -1; }.service-arrow { grid-column: 2; }.service-title { gap: 12px; }.service-icon { flex-basis: 38px; height: 38px; }
   .project-grid { gap: 55px; }.project-info { align-items: flex-start; flex-direction: column; }.project-info > span { text-align: left; }
-  .client-profiles { margin-top: 90px; padding-top: 70px; }.profile-list { grid-template-columns: 1fr; gap: 13px; }.profile-card { grid-template-columns: 48px minmax(0, 1fr) 20px; min-height: 96px; gap: 12px; padding: 18px; border-radius: 20px; }.profile-symbol { width: 46px; height: 46px; }.instagram-mark { width: 22px; height: 22px; border-radius: 7px; }.profile-name strong { white-space: nowrap; overflow-wrap: normal; font-size: clamp(12px, 3.8vw, 15px); }.profile-arrow { grid-column: 3; }
+  .client-profiles { margin-top: 90px; padding-top: 70px; }.profile-list { grid-template-columns: 1fr; gap: 13px; }.profile-name strong { white-space: nowrap; overflow-wrap: normal; font-size: clamp(12px, 3.8vw, 15px); }.profile-arrow { grid-column: 3; }
   .contact { min-height: 670px; }.contact h2 { font-size: 14vw; }
   footer { grid-template-columns: 1fr auto; } footer > p { grid-column: 1 / -1; grid-row: 2; }.footer-links { grid-column: 2; grid-row: 1; }
 }
