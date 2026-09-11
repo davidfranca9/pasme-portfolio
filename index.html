@@ -59,13 +59,11 @@
             <img src="assets/logo-pasme.jpg" alt="Logo P.A.S.M.E: personagem branco com olhos azuis em fundo brilhante" />
           </div>
           <div class="floating-pill pill-top"><span class="pulse"></span> Conteúdo em órbita</div>
-          <div class="floating-card stats-card">
-            <span>presença digital</span>
-            <strong>+ impacto</strong>
-            <div class="sparkline" aria-hidden="true">
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
-          </div>
+          <a class="floating-card stats-card" href="#perfis">
+            <span>perfis gerenciados</span>
+            <strong>4</strong>
+            <small>marcas ativas nas redes ↓</small>
+          </a>
           <div class="floating-card idea-card">
             <span class="idea-icon">✦</span>
             <div><strong>Estratégia</strong><small>com personalidade</small></div>
@@ -117,8 +115,8 @@
             <span class="service-arrow">↗</span>
           </article>
           <article class="service-item reveal">
-            <div class="service-title"><span class="service-icon">◫</span><h3>Identidade para redes</h3></div>
-            <p>Um sistema visual coeso para sua marca ser reconhecida antes mesmo de lerem o nome.</p>
+            <div class="service-title"><span class="service-icon">◫</span><h3>Identidade visual de marca</h3></div>
+            <p>Logotipo, paleta, tipografia e aplicações — do perfil no Instagram ao cartão de visitas, uniforme e frota.</p>
             <span class="service-arrow">↗</span>
           </article>
         </div>
@@ -131,8 +129,14 @@
           <p>Identidades visuais e conteúdo criados para marcas reais — do logotipo à aplicação no dia a dia.</p>
         </div>
 
+        <div class="project-filter reveal" role="group" aria-label="Filtrar projetos por categoria">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">Tudo <i>5</i></button>
+          <button class="filter-chip" type="button" data-filter="identidade" aria-pressed="false">Identidade visual <i>4</i></button>
+          <button class="filter-chip" type="button" data-filter="social" aria-pressed="false">Social media <i>3</i></button>
+        </div>
+
         <div class="project-grid">
-          <article class="project-card project-large reveal">
+          <article class="project-card project-large reveal" data-cat="identidade">
             <button class="project-art" type="button" data-caption="Paraná Desempenho Técnico · identidade visual completa">
               <img
                 src="assets/projetos/parana-desempenho-tecnico.jpg"
@@ -149,7 +153,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-cat="social">
             <button class="project-art" type="button" data-caption="700 Léo Gonzatto · 1º lugar na etapa TNR Pernambuco">
               <img
                 src="assets/projetos/700-leo-gonzatto-podio.jpg"
@@ -166,7 +170,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-cat="identidade social">
             <button class="project-art" type="button" data-caption="Barbara Xavier de Araújo · identidade visual">
               <img
                 src="assets/projetos/barbara-xavier-psicologa.jpg"
@@ -183,7 +187,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-cat="identidade social">
             <button class="project-art" type="button" data-caption="700 Léo Gonzatto · identidade visual esportiva">
               <img
                 src="assets/projetos/700-leo-gonzatto.jpg"
@@ -200,7 +204,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+          <article class="project-card reveal" data-cat="identidade">
             <button class="project-art" type="button" data-caption="Jéssica Santana Pereira · marca e cartão de visitas">
               <img
                 src="assets/projetos/jessica-santana-psicologa.jpg"

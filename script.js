@@ -77,3 +77,23 @@ lightbox.addEventListener('click', (event) => {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
 });
+
+const filterChips = document.querySelectorAll('.filter-chip');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterChips.forEach((chip) => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+
+    filterChips.forEach((other) => {
+      const active = other === chip;
+      other.classList.toggle('is-active', active);
+      other.setAttribute('aria-pressed', String(active));
+    });
+
+    projectCards.forEach((card) => {
+      const cats = (card.dataset.cat || '').split(' ');
+      card.classList.toggle('is-hidden', filter !== 'all' && !cats.includes(filter));
+    });
+  });
+});
