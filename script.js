@@ -66,7 +66,7 @@ lightbox.addEventListener('transitionend', (event) => {
   }
 });
 
-document.querySelectorAll('.project-art').forEach((trigger) => {
+document.querySelectorAll('[data-caption]').forEach((trigger) => {
   trigger.addEventListener('click', () => openLightbox(trigger));
 });
 
